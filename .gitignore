@@ -1,0 +1,5 @@
+# Vim swap files
+*.swp
+
+# Erlang binaries
+*.beam
