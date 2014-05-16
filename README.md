@@ -1,7 +1,7 @@
 # {Key, Value} cache
 ### TODO
 1. Add option for changing the value of an existing key.
-2. ~~Abstract messages away with the help of functions dealing with receiving and sending them:~~ ** % Done using gen_server**
+2. ~~Abstract messages away with the help of functions dealing with receiving and sending them:~~ **% Done using gen_server**
       * start/0 -> () -> avoid user do this `Cache = spawn(cache, process, [[]]).`
       * store/2 -> (Pid, {NewKey, NewValue})
       * update/2 -> (Pid, {ExistingKey, NewValue}) (first point must be done first)
