@@ -8,6 +8,7 @@
       * ~~lookup/1 -> (ExistingKey)~~
       * ~~list/0 -> ()~~
 3. ~~Add Unit Tests~~
+4. Add time management
 
 ### How to tests cache.erl module (manually)
 ```
