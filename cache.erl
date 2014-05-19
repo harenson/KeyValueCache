@@ -5,7 +5,8 @@
          store/2,
          update/2,
          lookup/1,
-         list/0]).
+         list/0,
+         stop/0]).
 %% gen_server callbacks
 -export([init/1,
          handle_call/3,
@@ -46,6 +47,9 @@ handle_call({lookup, {Key}}, _From, CacheList) ->
     end,
     {reply, Reply, CacheList};
 
+handle_call(stop, _From, CacheList) ->
+    {stop, normal, ok, CacheList};
+
 handle_call(Unknown, _From, CacheList) ->
     Reply = {unknown_request, Unknown},
     {reply, {error, Reply}, CacheList}.
@@ -82,3 +86,7 @@ lookup(Key) ->
 % List the cache content.
 list() ->
     gen_server:cast(?MODULE, list).
+
+% Stop the process
+stop() ->
+    gen_server:call(?MODULE, stop).

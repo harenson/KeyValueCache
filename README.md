@@ -7,7 +7,7 @@
       * ~~update/2 -> (ExistingKey, NewValue) (first point must be done first)~~
       * ~~lookup/1 -> (ExistingKey)~~
       * ~~list/0 -> ()~~
-3. Add Unit Tests
+3. ~~Add Unit Tests~~
 
 ### How to tests cache.erl module (manually)
 ```
